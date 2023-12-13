@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <title>Elite Voting</title>
+</head>
+<body class="flex items-center justify-center min-h-screen">
+
+<!-- Features section -->
+<section id="features" class="p-10 flex items-center justify-center">
+  <div id="frame" class="w-auto"></div>
+  <script>
+    var iframe = document.createElement("iframe");
+    iframe.src = "https://drive.google.com/file/d/1d_jS8gE6KJeYq_hOL4BgMLw122Jrc_j7/preview";
+    iframe.frameBorder = "0";
+    iframe.loading = "lazy";
+    iframe.allowFullscreen = true;
+    if (window.innerWidth <= 400) {
+      iframe.width = "400";
+      iframe.height = "200";
+    } else {
+      iframe.width = "800";
+      iframe.height = "600";
+    }
+    document.getElementById("frame").appendChild(iframe);
+    const currentYear = new Date().getFullYear();
+    document.getElementById("yr").textContent = currentYear;
+  </script>
+</section>
+
+
+</body>
+</html>
